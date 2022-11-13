@@ -1,0 +1,10 @@
+#appBody {
+  background-color: #faf5e4;
+  border: solid #225884 2px;
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+  width: 650px;
+  text-align: center;
+}
