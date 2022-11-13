@@ -8,3 +8,11 @@
   width: 650px;
   text-align: center;
 }
+#currentInfo {
+  background-color: #225884;
+  border: solid #faf5e4 1px;
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: left;
+}
