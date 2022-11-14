@@ -43,11 +43,13 @@ footer {
 }
 #currentTempDisplay {
   display: block;
-  font-size: 50px;
+  font-size: 15px;
   padding: 30px;
   text-align: center;
 }
-
+#currentTempDispaly strong {
+  font-size: 50px;
+}
 .highTemp {
   font-weight: bold;
   color: #113f67;
