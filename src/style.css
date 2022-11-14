@@ -12,6 +12,16 @@ body {
   width: 650px;
   text-align: center;
 }
+#citySearchEngine {
+  color: #a2a9d3;
+  border: solid #a2a9d3 2px;
+  border-radius: 20px;
+}
+#citySearchButton {
+  background-color: #a2a9d3;
+  color: white;
+  border-radius: 20px;
+}
 #currentInfo {
   background-color: #e7eaf6;
   border: solid #e7eaf6 1px;
