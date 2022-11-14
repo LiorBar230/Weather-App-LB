@@ -25,7 +25,7 @@ let citySearchEngine = document.querySelector("form#searchCity");
 citySearchEngine.addEventListener("submit", showSearchCityName);
 
 function showSearchCityTemp(response) {
-  let currentTempDisplay = document.querySelector("div#currentTempDisplay");
+  let currentTempDisplay = document.querySelector("strong#temperature");
   let temperature = Math.round(response.data.main.temp);
   currentTempDisplay.innerHTML = `${temperature}°`;
 }
