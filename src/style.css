@@ -34,7 +34,7 @@ body {
   margin: 20px;
 }
 #currentLocation {
-  font-size: 75px;
+  font-size: 55px;
 }
 #currentTempDisplay {
   display: block;
