@@ -19,7 +19,7 @@ function showSearchCityName(event) {
   let searchCityName = document.querySelector("input#citySearchEngine");
   let cityNameDisplay = document.querySelector("h2#currentLocation");
   cityNameDisplay.innerHTML = `${searchCityName.value}`;
-  searchCityName(searchCityName.value);
+  searchCity(searchCityName.value);
 }
 let citySearchEngine = document.querySelector("form#searchCity");
 citySearchEngine.addEventListener("submit", showSearchCityName);
