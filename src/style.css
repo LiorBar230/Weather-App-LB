@@ -52,7 +52,7 @@ footer {
 }
 #CandF {
   position: relative;
-  top: 50px;
+  top: -50px;
   left: 20px;
 }
 .highTemp {
