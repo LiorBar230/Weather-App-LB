@@ -31,9 +31,9 @@ footer {
   border: solid #e7eaf6 1px;
   border-radius: 30px;
   display: block;
-  padding: 30px 20px;
+  padding: 20px 30px;
   width: 300px;
-  text-align: center;
+  text-align: left;
   margin: 20px;
 }
 #currentLocation {
