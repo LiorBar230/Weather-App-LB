@@ -9,7 +9,7 @@ let days = [
   "Friday",
   "Saturday",
 ];
-let nowDay = days[nowDateTime.getday()];
+let nowDay = days[nowDateTime.getDay()];
 let nowHours = nowDateTime.getHours();
 let nowMinutes = nowDateTime.getMinutes();
 let currentDate = document.querySelector("div#currentDayAndTime");
@@ -34,5 +34,3 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showSearchCityTemp);
 }
-
-alert("hello");
