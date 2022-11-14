@@ -1,6 +1,6 @@
 #appBody {
-  background-color: #faf5e4;
-  border: solid #225884 2px;
+  background-color: #e7eaf6;
+  border: solid #a2a9d3 2px;
   border-radius: 30px;
   display: block;
   margin: 0 auto;
@@ -9,8 +9,8 @@
   text-align: center;
 }
 #currentInfo {
-  background-color: #225884;
-  border: solid #faf5e4 1px;
+  background-color: #a2a9d3;
+  border: solid #e7eaf6 1px;
   border-radius: 30px;
   display: block;
   margin: 0 auto;
