@@ -19,11 +19,16 @@
 }
 #currentTempDisplay {
   display: block;
-  font-size: 80px;
+  font-size: 60px;
   padding: 30px;
   text-align: center;
 }
 
 .highTemp {
   font-weight: bold;
+}
+.lowTemp {
+  font-weight: thin;
+  color: gray;
+  font-size: smaller;
 }
