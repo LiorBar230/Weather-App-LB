@@ -41,11 +41,14 @@ footer {
 }
 #currentTempDisplay {
   display: block;
-  font-size: 55px;
+  font-size: 50px;
   padding: 30px;
   text-align: center;
 }
 
+.currentLocationTempEmoji {
+  font-size: 40px;
+}
 .highTemp {
   font-weight: bold;
   color: #113f67;
