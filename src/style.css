@@ -1,5 +1,6 @@
 body {
   background-color: #e7eaf6;
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
 }
 
 footer {
@@ -46,9 +47,6 @@ footer {
   text-align: center;
 }
 
-.currentLocationTempEmoji {
-  font-size: 30px;
-}
 .highTemp {
   font-weight: bold;
   color: #113f67;
