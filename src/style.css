@@ -50,6 +50,11 @@ footer {
 #temperature {
   font-size: 50px;
 }
+#CandF {
+  position: relative;
+  top: 50px;
+  left: 20px;
+}
 .highTemp {
   font-weight: bold;
   color: #113f67;
