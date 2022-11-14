@@ -10,7 +10,7 @@ footer {
 #appBody {
   background-color: white;
   border: solid #a2a9d3 2px;
-  border-radius: 30px;
+  border-radius: 20px;
   display: block;
   margin: 0 auto;
   padding: 30px;
@@ -31,7 +31,7 @@ footer {
 #currentInfo {
   background-color: #e7eaf6;
   border: solid #e7eaf6 1px;
-  border-radius: 30px;
+  border-radius: 20px;
   display: block;
   padding: 20px 30px;
   width: 300px;
