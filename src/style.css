@@ -2,6 +2,9 @@ body {
   background-color: #e7eaf6;
 }
 
+footer {
+  text-align: center;
+}
 #appBody {
   background-color: white;
   border: solid #a2a9d3 2px;
