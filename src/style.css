@@ -29,9 +29,12 @@ body {
   border-radius: 30px;
   display: block;
   padding: 30px 20px;
-  width: 250px;
+  width: 300px;
   text-align: center;
   margin: 20px;
+}
+#currentLocation {
+  font-size: 75px;
 }
 #currentTempDisplay {
   display: block;
