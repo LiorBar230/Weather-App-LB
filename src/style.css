@@ -29,7 +29,7 @@ body {
   border-radius: 30px;
   display: block;
   padding: 30px 20px;
-  width: 200px;
+  width: 250px;
   text-align: center;
   margin: 20px;
 }
@@ -49,6 +49,6 @@ body {
   font-size: smaller;
 }
 .day {
-  color: #e7eaf6;
+  color: #a2a9d3;
   font-size: 20px;
 }
