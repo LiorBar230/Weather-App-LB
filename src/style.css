@@ -13,9 +13,10 @@
   border: solid #e7eaf6 1px;
   border-radius: 30px;
   display: block;
-  padding: 30px;
+  padding: 30px 20px;
   width: 200px;
   text-align: center;
+  margin: 0 20px;
 }
 #currentTempDisplay {
   display: block;
@@ -28,7 +29,6 @@
   font-weight: bold;
 }
 .lowTemp {
-  font-weight: thin;
   color: gray;
   font-size: smaller;
 }
