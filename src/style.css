@@ -21,6 +21,7 @@ body {
   background-color: #a2a9d3;
   color: white;
   border-radius: 20px;
+  border: solid #a2a9d3 1px;
 }
 #currentInfo {
   background-color: #e7eaf6;
@@ -41,8 +42,13 @@ body {
 
 .highTemp {
   font-weight: bold;
+  color: #113f67;
 }
 .lowTemp {
-  color: gray;
+  color: #37598b;
   font-size: smaller;
+}
+.day {
+  color: #e7eaf6;
+  font-size: 20px;
 }
