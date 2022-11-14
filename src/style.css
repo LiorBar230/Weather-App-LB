@@ -11,8 +11,10 @@
 #currentInfo {
   background-color: #225884;
   border: solid #faf5e4 1px;
+  border-radius: 30px;
   display: block;
   margin: 0 auto;
   padding: 30px;
+  width: 200px;
   text-align: left;
 }
