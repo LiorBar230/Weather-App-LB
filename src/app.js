@@ -46,6 +46,9 @@ function showSearchCityTemp(response) {
   );
   let condition = response.data.weather[0].description;
   let weatherIcon = document.querySelector("img#icon");
+  celsiusTemp = Math.round(response.data.main.temp);
+  minCelsiusTemp = Math.round(response.data.main.temp_min);
+  maxCelsiusTemp = Math.round(response.data.main.temp_max);
   currentTempDisplay.innerHTML = `${temperature}`;
   currentHumidityDisplay.innerHTML = `Humidty:${humidity}% `;
   currentWindDisplay.innerHTML = `Wind:${wind} Km/H`;
@@ -63,3 +66,38 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showSearchCityTemp);
 }
+
+function showFarenheitTemp(event) {
+  event.preventDefault();
+  let temperatureDisplay = document.querySelector("strong#temperature");
+  let minTempDisplay = document.querySelector("span#currentLowTemp");
+  let minFarenheitTemp = Math.round((minCelsiusTemp * 9) / 5 + 32);
+  let maxTempDisplay = document.querySelector("span#currentHighTemp");
+  let maxFarenheitTemp = Math.round((maxCelsiusTemp * 9) / 5 + 32);
+  let farenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureDisplay.innerHTML = Math.round(farenheitTemp);
+  maxTempDisplay.innerHTML = `${maxFarenheitTemp}°/ `;
+  minTempDisplay.innerHTML = `${minFarenheitTemp}°`;
+  celsiusLink.classList.remove("active-link");
+  farenheitLink.classList.add("active-link");
+}
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureDisplay = document.querySelector("strong#temperature");
+  let minTempDisplay = document.querySelector("span#currentLowTemp");
+  let maxTempDisplay = document.querySelector("span#currentHighTemp");
+  temperatureDisplay.innerHTML = celsiusTemp;
+  maxTempDisplay.innerHTML = `${maxCelsiusTemp}°/ `;
+  minTempDisplay.innerHTML = `${minCelsiusTemp}°`;
+  farenheitLink.classList.remove("active-link");
+  celsiusLink.classList.add("active-link");
+}
+let celsiusTemp = null;
+let minCelsiusTemp = null;
+let maxCelsiusTemp = null;
+let farenheitLink = document.querySelector("a#farenheit-link");
+farenheitLink.addEventListener("click", showFarenheitTemp);
+let celsiusLink = document.querySelector("a#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemp);
+
+searchCity("Washington");
