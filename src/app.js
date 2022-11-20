@@ -30,6 +30,31 @@ function showSearchCityName(event) {
 let citySearchEngine = document.querySelector("form#searchCity");
 citySearchEngine.addEventListener("submit", showSearchCityName);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+            <span>
+              <span class="day">${day}</span>
+              <img
+                id="weatherImage-Day"
+                class="weatherImage-Week"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="clear"
+                id="icon"
+              />
+              <span class="highTemp"> 15°/</span>
+              <span class="lowTemp"> 10°</span>
+            </span>
+          </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function showSearchCityTemp(response) {
   let currentTempDisplay = document.querySelector("strong#temperature");
   let temperature = Math.round(response.data.main.temp);
@@ -60,6 +85,7 @@ function showSearchCityTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
+  displayForecast();
 }
 function searchCity(city) {
   let apiKey = "aca4dd3643b89e94dbd3cac6cf6f2638";
