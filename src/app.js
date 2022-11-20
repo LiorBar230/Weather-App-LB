@@ -27,7 +27,7 @@ citySearchEngine.addEventListener("submit", showSearchCityName);
 function showSearchCityTemp(response) {
   let currentTempDisplay = document.querySelector("strong#temperature");
   let temperature = Math.round(response.data.main.temp);
-  currentTempDisplay.innerHTML = `${temperature}°`;
+  currentTempDisplay.innerHTML = `${temperature}`;
 }
 function searchCity(city) {
   let apiKey = "aca4dd3643b89e94dbd3cac6cf6f2638";
