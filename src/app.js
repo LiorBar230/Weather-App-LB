@@ -30,27 +30,39 @@ function showSearchCityName(event) {
 let citySearchEngine = document.querySelector("form#searchCity");
 citySearchEngine.addEventListener("submit", showSearchCityName);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
 function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
             <span>
-              <span class="day">${day}</span>
+              <span class="day">${formatDay(forecastDay.dt)}</span>
               <img
                 id="weatherImage-Day"
                 class="weatherImage-Week"
-                src="http://openweathermap.org/img/wn/10d@2x.png"
+                src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png"
                 alt="clear"
                 id="icon"
               />
-              <span class="highTemp"> 15°/</span>
-              <span class="lowTemp"> 10°</span>
+              <span class="highTemp"> ${Math.round(
+                forecastDay.temp.max
+              )}°/</span>
+              <span class="lowTemp"> ${Math.round(forecastDay.temp.min)}°</span>
             </span>
           </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -92,6 +104,7 @@ function showSearchCityTemp(response) {
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
 }
+
 function searchCity(city) {
   let apiKey = "aca4dd3643b89e94dbd3cac6cf6f2638";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
