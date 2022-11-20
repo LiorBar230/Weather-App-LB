@@ -40,6 +40,7 @@ footer {
 }
 #currentLocation {
   font-size: 40px;
+  text-transform: capitalize;
 }
 #currentTempDisplay {
   display: block;
@@ -54,6 +55,9 @@ footer {
   position: relative;
   top: -80px;
   left: 60px;
+}
+#currentConditions::first-letter {
+  text-transform: capitalize;
 }
 .highTemp {
   font-weight: bold;

@@ -11,9 +11,15 @@ let days = [
 ];
 let nowDay = days[nowDateTime.getDay()];
 let nowHours = nowDateTime.getHours();
+if (nowHours < 10) {
+  nowHours = `0${nowHours}`;
+}
 let nowMinutes = nowDateTime.getMinutes();
+if (nowMinutes < 10) {
+  nowMinutes = `0${nowMinutes}`;
+}
 let currentDate = document.querySelector("div#currentDayAndTime");
-currentDate.innerHTML = `${nowDay},${nowHours}:${nowMinutes}`;
+currentDate.innerHTML = ` Last updated: ${nowDay},${nowHours}:${nowMinutes}`;
 function showSearchCityName(event) {
   event.preventDefault();
   let searchCityName = document.querySelector("input#citySearchEngine");
@@ -35,11 +41,16 @@ function showSearchCityTemp(response) {
   let minTemp = Math.round(response.data.main.temp_min);
   let tempHighDisplay = document.querySelector("span#currentHighTemp");
   let tempHigh = Math.round(response.data.main.temp_max);
+  let currentConditionsDisplay = document.querySelector(
+    "div#currentConditions"
+  );
+  let condition = response.data.weather[0].description;
   currentTempDisplay.innerHTML = `${temperature}`;
-  currentHumidityDisplay.innerHTML = `Humidty: ${humidity}%`;
-  currentWindDisplay.innerHTML = `Wind: ${wind} Km/h`;
+  currentHumidityDisplay.innerHTML = `Humidty:${humidity}% `;
+  currentWindDisplay.innerHTML = `Wind:${wind} Km/H`;
   tempMinDisplay.innerHTML = `${minTemp}°`;
   tempHighDisplay.innerHTML = `${tempHigh}°/`;
+  currentConditionsDisplay.innerHTML = `${condition}`;
 }
 function searchCity(city) {
   let apiKey = "aca4dd3643b89e94dbd3cac6cf6f2638";
