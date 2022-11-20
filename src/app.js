@@ -27,7 +27,19 @@ citySearchEngine.addEventListener("submit", showSearchCityName);
 function showSearchCityTemp(response) {
   let currentTempDisplay = document.querySelector("strong#temperature");
   let temperature = Math.round(response.data.main.temp);
+  let currentHumidtyDisplay = document.querySelector("span#currentHumidity");
+  let humidty = Math.round(response.data.main.humidty);
+  let currentWindDisplay = document.querySelector("span#currentWind");
+  let wind = Math.round(response.data.wind.speed);
+  let tempMinDisplay = document.querySelector("span#currentLowTemp");
+  let minTemp = Math.round(response.data.main.temp_min);
+  let tempHighDisplay = document.querySelector("span#currentHighTemp");
+  let tempHigh = Math.round(response.data.main.temp_max);
   currentTempDisplay.innerHTML = `${temperature}`;
+  currentHumidtyDisplay.innerHTML = `Humidty: ${humidty}%`;
+  currentWindDisplay.innerHTML = `Wind: ${wind} Km/h`;
+  tempMinDisplay.innerHTML = `${minTemp}°`;
+  tempHighDisplay.innerHTML = `${tempHigh}°`;
 }
 function searchCity(city) {
   let apiKey = "aca4dd3643b89e94dbd3cac6cf6f2638";
