@@ -45,12 +45,18 @@ function showSearchCityTemp(response) {
     "div#currentConditions"
   );
   let condition = response.data.weather[0].description;
+  let weatherIcon = document.querySelector("img#icon");
   currentTempDisplay.innerHTML = `${temperature}`;
   currentHumidityDisplay.innerHTML = `Humidty:${humidity}% `;
   currentWindDisplay.innerHTML = `Wind:${wind} Km/H`;
   tempMinDisplay.innerHTML = `${minTemp}°`;
   tempHighDisplay.innerHTML = `${tempHigh}°/`;
   currentConditionsDisplay.innerHTML = `${condition}`;
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 function searchCity(city) {
   let apiKey = "aca4dd3643b89e94dbd3cac6cf6f2638";

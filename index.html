@@ -12,10 +12,9 @@
       crossorigin="anonymous"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-      <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-   
     <div id="appBody">
       <form id="searchCity">
         <input
@@ -27,65 +26,129 @@
       </form>
       <div class="container currentLocationInfo">
         <div class="row currentLocationInfo">
-            <div class="col generalCurrentLocationInfo">
-                <div id="currentInfo">
-                     <h2 id="currentLocation">Washington</h2>
-                     <div id="currentDayAndTime">Sunday, 18:37</div>
-                      <div id="currentHumidtyWind"> <span id="currentHumidity"> Humidty: 60%</span>  <span id="currentWind">  Wind: 11 Km/h </span></div>
-                              <div id="currentHighLowTemp"> <span id="currentHighTemp" class="highTemp"> 30°/</span> <span id="currentLowTemp" class="lowTemp"> 20°</span></div>
-                 </div>
-           </div>
-            <div class="col currentLocationTemp" id="currentTempDisplay">  <strong id="temperature">30</strong> <div id="tempUnits">°C|F</div> <br/> <div id="currentConditions">Clear sky</div> </div>
+          <div class="col generalCurrentLocationInfo">
+            <div id="currentInfo">
+              <h2 id="currentLocation">Washington</h2>
+              <div id="currentDayAndTime">Sunday, 18:37</div>
+              <div id="currentHumidtyWind">
+                <span id="currentHumidity"> Humidty: 60%</span>
+                <span id="currentWind"> Wind: 11 Km/h </span>
+              </div>
+              <div id="currentHighLowTemp">
+                <span id="currentHighTemp" class="highTemp"> 30°/</span>
+                <span id="currentLowTemp" class="lowTemp"> 20°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col currentLocationTemp" id="currentTempDisplay">
+            <img
+              class="weatherImage"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="clear"
+              id="icon"
+            />
+            <strong id="temperature">30</strong>
+            <div id="tempUnits">°C|F</div>
+            <br />
+            <div id="currentConditions">Clear sky</div>
+          </div>
         </div>
       </div>
       <div class="container weekDays">
         <div class="row weekDays">
-            <div class="col dayOne">
-                <span>
-                   <span class="day">Mon</span> </br> ☀ </br> 
-                    <span class="highTemp"> 15°/</span>
-                    <span class="lowTemp"> 10°</span>
-                 </span> 
-            </div>
-            <div class="col dayTwo">
-                <span>
-                    <span class="day">Tue</span> </br> ☀ </br> 
-                    <span class="highTemp"> 15°/</span>
-                    <span class="lowTemp"> 10°</span>
-                 </span> 
-            </div>
-            <div class="col dayThree">
-                <span>
-                   <span class="day">Wed</span></br> ☀ </br> 
-                    <span class="highTemp"> 15°/</span>
-                    <span class="lowTemp"> 10°</span>
-                 </span> 
-            </div>
-            <div class="col dayFour">
-                <span>
-                    <span class="day">Thu</span> </br> ☀ </br> 
-                    <span class="highTemp"> 15°/</span>
-                    <span class="lowTemp"> 10°</span>
-                 </span> 
-            </div>
-            <div class="col dayFive">
-                <span>
-                    <span class="day">Fri</span> </br> ☀ </br> 
-                    <span class="highTemp"> 15°/</span>
-                    <span class="lowTemp"> 10°</span>
-                 </span> 
-            </div>
-            <div class="col daySix">
-                <span>
-                    <span class="day">Sat</span> </br> ☀ </br> 
-                    <span class="highTemp"> 15°/</span>
-                    <span class="lowTemp"> 10°</span>
-                 </span> 
-            </div>
+          <div class="col dayOne">
+            <span>
+              <span class="day">Mon</span>
+              <img
+                id="weatherImage-DayOne"
+                class="weatherImage-Week"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="clear"
+                id="icon"
+              />
+              <span class="highTemp"> 15°/</span>
+              <span class="lowTemp"> 10°</span>
+            </span>
+          </div>
+          <div class="col dayTwo">
+            <span>
+              <span class="day">Tue</span>
+              <img
+                id="weatherImage-DayTwo"
+                class="weatherImage-Week"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="clear"
+                id="icon"
+              />
+              <span class="highTemp"> 15°/</span>
+              <span class="lowTemp"> 10°</span>
+            </span>
+          </div>
+          <div class="col dayThree">
+            <span>
+              <span class="day">Wed</span>
+              <img
+                id="weatherImage-DayThree"
+                class="weatherImage-Week"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="clear"
+                id="icon"
+              />
+              <span class="highTemp"> 15°/</span>
+              <span class="lowTemp"> 10°</span>
+            </span>
+          </div>
+          <div class="col dayFour">
+            <span>
+              <span class="day">Thu</span>
+              <img
+                id="weatherImage-DayFour"
+                class="weatherImage-Week"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="clear"
+                id="icon"
+              />
+              <span class="highTemp"> 15°/</span>
+              <span class="lowTemp"> 10°</span>
+            </span>
+          </div>
+          <div class="col dayFive">
+            <span>
+              <span class="day">Fri</span>
+              <img
+                id="weatherImage-DayFive"
+                class="weatherImage-Week"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="clear"
+                id="icon"
+              />
+              <span class="highTemp"> 15°/</span>
+              <span class="lowTemp"> 10°</span>
+            </span>
+          </div>
+          <div class="col daySix">
+            <span>
+              <span class="day">Sat</span>
+              <img
+                id="weatherImage-DaySix"
+                class="weatherImage-Week"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="clear"
+                id="icon"
+              />
+              <span class="highTemp"> 15°/</span>
+              <span class="lowTemp"> 10°</span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
-    <footer> <a href="https://github.com/LiorBar230/Weather-App-LB" target="_blank">Open-source code  </a>by Lior Bar, hosted on <a href="https://app.netlify.com/sites/neon-blini-496600"> Netlify</a> </footer>
+    <footer>
+      <a href="https://github.com/LiorBar230/Weather-App-LB" target="_blank"
+        >Open-source code </a
+      >by Lior Bar, hosted on
+      <a href="https://app.netlify.com/sites/neon-blini-496600"> Netlify</a>
+    </footer>
     <script src="src/app.js"></script>
   </body>
 </html>

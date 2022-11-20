@@ -49,15 +49,28 @@ footer {
   text-align: center;
 }
 #temperature {
-  font-size: 50px;
+  position: relative;
+  top: 30px;
+  font-size: 60px;
 }
 #tempUnits {
   position: relative;
-  top: -80px;
-  left: 60px;
+  top: -60px;
+  left: 85px;
 }
 #currentConditions::first-letter {
   text-transform: capitalize;
+}
+.weatherImage {
+  position: relative;
+  top: 20px;
+  margin-right: 5px;
+  height: 70px;
+  width: 70px;
+}
+.weatherImage-Week {
+  height: 70px;
+  width: 70px;
 }
 .highTemp {
   font-weight: bold;
