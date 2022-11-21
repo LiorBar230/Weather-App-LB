@@ -58,17 +58,10 @@ footer {
   top: -60px;
   left: 85px;
 }
-#currentConditions::first-letter {
+#currentConditions:first-letter {
   text-transform: capitalize;
 }
-.active-link {
-  color: black;
-  cursor: default;
-  text-decoration: none;
-}
-.link {
-  text-decoration: none;
-}
+
 .weatherImage {
   position: relative;
   top: 20px;
